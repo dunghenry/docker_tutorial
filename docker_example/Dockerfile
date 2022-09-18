@@ -2,8 +2,14 @@ FROM node:16-alpine
 
 WORKDIR /app
 
-COPY . .
+RUN chown node:node /app
 
-RUN npm i
+USER node
+
+COPY --chown=node:node . .
+
+# COPY . .
+
+RUN npm i --production
 
 CMD [ "npm", "start" ]
