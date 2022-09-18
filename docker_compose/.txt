@@ -1,0 +1,4 @@
+docker-compose down
+Removing backend ... done
+Removing mongodb ... done
+Removing network docker_compose_trandung
