@@ -1,0 +1,22 @@
+ -Build image
+	docker build -t trandung2001/api:v1 .
+	docker build -f Dockerfile.dev -t trandung2001/images_name:version .
+-Run
+	docker run -p port_docker:port_app name_acc_dockerhub/image_name:version
+	docker run -it --rm --name create_name -p port_docker:port_app name_acc_dockerhub/image_name:version
+	docker run -p 4000:4000 trandung2001/api:v1
+--List image
+	docker images
+--List container running
+	docker ps
+--List container running and no running
+	docker ps -a
+--Stop container
+	docker stop name_container
+--Delete container
+	detete single container: docker rm name_container
+	delete all container: docker rm $(docker ps -a -q)
+--Delete image:
+	delete single image: docker rmi image_id
+	delete all image:  docker rmi $(docker images -q)
+	docker rmi name_acc_dockerhub/image_name:version
