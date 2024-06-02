@@ -2,8 +2,8 @@
 	docker build -t trandung2001/api:v1 .
 	docker build -f Dockerfile.dev -t trandung2001/images_name:version .
 -Run
-	docker run -p port_docker:port_app name_acc_dockerhub/image_name:version
-	docker run -it --rm --name create_name -p port_docker:port_app name_acc_dockerhub/image_name:version
+	docker run -p port_app_run_local:port_image name_acc_dockerhub/image_name:version
+	docker run -it --rm --name create_name -p port_app_run_local:port_image name_acc_dockerhub/image_name:version
 	docker run -p 4000:4000 trandung2001/api:v1
 --List image
 	docker images
